@@ -1,4 +1,6 @@
 @use "reset" as *;
+@use "base" as *;
+@use "media-queries" as *;
 
 .grid-container {
   min-height: 100vh;
@@ -8,23 +10,40 @@
     "aside main" 1fr
     "footer footer" auto
     / 350px auto;
+
+  @include xs {
+    grid:
+      "header header" auto
+      "aside aside" 1fr
+      "main main" 1fr
+      "footer footer" 1fr
+      / auto;
+  }
 }
 .header {
   grid-area: header;
-  min-height: 150px;
-  background-color: aqua;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: aqua;
 }
 .aside {
   grid-area: aside;
-  background-color: blue;
+  // background-color: blue;
 }
 .main {
   grid-area: main;
-  background-color: red;
+  // background-color: red;
 }
 
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100px;
-  background-color: teal;
+  // background-color: teal;
 }

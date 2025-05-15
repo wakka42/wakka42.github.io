@@ -4,32 +4,77 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text);
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
 .grid-container {
   min-height: 100vh;
   display: grid;
   grid: "header header" auto "aside main" 1fr "footer footer" auto/350px auto;
 }
+@media (max-width: 480px) {
+  .grid-container {
+    grid: "header header" auto "aside aside" 1fr "main main" 1fr "footer footer" 1fr/auto;
+  }
+}
 
 .header {
   grid-area: header;
-  min-height: 150px;
-  background-color: aqua;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .aside {
   grid-area: aside;
-  background-color: blue;
 }
 
 .main {
   grid-area: main;
-  background-color: red;
 }
 
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100px;
-  background-color: teal;
 }
 
 /*# sourceMappingURL=style.css.map */
