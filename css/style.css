@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  min-height: 100vh;
+  display: grid;
+  grid: "header header" auto "aside main" 1fr "footer footer" auto/350px auto;
+}
+
+.header {
+  grid-area: header;
+  min-height: 150px;
+  background-color: aqua;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: blue;
+}
+
+.main {
+  grid-area: main;
+  background-color: red;
+}
+
+.footer {
+  grid-area: footer;
+  min-height: 100px;
+  background-color: teal;
+}
+
+/*# sourceMappingURL=style.css.map */
