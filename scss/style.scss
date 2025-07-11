@@ -1,49 +1,110 @@
-@use "reset" as *;
-@use "base" as *;
-@use "media-queries" as *;
+@use "./media-queries" as *;
+@use "./reset" as *;
+@use "./base" as *;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+}
 
 .grid-container {
-  min-height: 100vh;
   display: grid;
-  grid:
+  height: 100vh;
+  grid-template:
     "header header" auto
     "aside main" 1fr
     "footer footer" auto
-    / 350px auto;
-
+    / 200px 1fr;
   @include xs {
-    grid:
-      "header header" auto
-      "aside aside" 1fr
-      "main main" 1fr
-      "footer footer" 1fr
-      / auto;
+    grid-template:
+      "header" auto
+      "aside" 1fr
+      "main" 1fr
+      "footer" auto
+      / 1fr;
   }
 }
+
 .header {
   grid-area: header;
-  min-height: 100px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // background-color: aqua;
+  flex-direction: row;
+  height: 120px;
+  color: var(#2a324b);
+  .profile {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-shrink: 0;
+    width: 200px;
+    .pic-profile {
+      height: 100%;
+      width: 120px;
+      border-radius: 50%;
+      border: 0.3rem solid;
+      border-color: #7392b7;
+    }
+  }
+  .hook {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include xs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 }
+
 .aside {
   grid-area: aside;
-  // background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .block {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #759eb8;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
+
 .main {
   grid-area: main;
-  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  .block {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #759eb8;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+    }
+  }
 }
 
 .footer {
+  background-color: #759eb8;
   grid-area: footer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;
-  // background-color: teal;
+  height: 100px;
 }

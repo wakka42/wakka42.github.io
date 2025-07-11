@@ -1,31 +1,30 @@
-html {
-  font-size: 62.5%;
+h1 {
+  font-size: 4em;
 }
 
-body {
-  font-family: var(--font-family);
-  color: var(--text);
-  font-size: 1.6rem;
+h2 {
+  font-size: 2.5em;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 1.5;
+  padding-top: 10px;
 }
 
 p {
-  margin: 1rem 0;
+  font-size: 1em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1rem 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: var(--text);
+ul,
+li,
+a,
+button {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+  font-size: 1.3em;
+  display: list-item;
 }
