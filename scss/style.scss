@@ -80,6 +80,12 @@ body {
       justify-content: center;
     }
   }
+  @include xs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 }
 
 .main {
@@ -90,8 +96,9 @@ body {
   align-items: start;
   .block {
     box-sizing: border-box;
-    width: 90%;
+    width: 96%;
     padding: 10px;
+    margin-left: 10px;
     border-radius: 10px;
     background-color: #759eb8;
     ul {
@@ -106,5 +113,5 @@ body {
 .footer {
   background-color: #759eb8;
   grid-area: footer;
-  height: 100px;
+  min-height: 70px;
 }
