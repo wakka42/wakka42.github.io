@@ -86,9 +86,9 @@ body {
     }
   }
   @include xs {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -104,11 +104,14 @@ body {
   }
   .block {
     box-sizing: border-box;
-    width: 95%;
+    width: 90%;
     padding: 10px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: #759eb8;
+    @include xs {
+      margin-left: 0;
+    }
     ul {
       display: flex;
       flex-direction: column;
@@ -116,8 +119,8 @@ body {
       justify-content: center;
       @include xs {
         flex-direction: column;
-        justify-content: center;
-        align-items: start;
+        // justify-content: center;
+        // align-items: start;
       }
       .info-block {
         margin-bottom: 10px;
@@ -157,8 +160,8 @@ body {
 
 .footer {
   background-color: #759eb8;
-  margin-top: 10px;
   grid-area: footer;
+  margin-top: 10px;
   min-height: 70px;
   display: flex;
   justify-content: center;
