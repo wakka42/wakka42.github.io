@@ -227,7 +227,7 @@ body {
 .footer {
   background-color: #759eb8;
   grid-area: footer;
-  margin-top: 10px;
+  margin-top: 15px;
   min-height: 70px;
   display: flex;
   justify-content: center;
