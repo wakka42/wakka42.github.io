@@ -1,5 +1,9 @@
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
+/* Extra Large desktop */
 :root {
-  font-size: 62.5%;
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -7,6 +11,31 @@
   color: var(--font-color);
   --background-color: #b3c5d7;
   --font-color: #2a324b;
+}
+@media (max-width: 480px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  :root {
+    font-size: 75%;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  :root {
+    font-size: 90%;
+  }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  :root {
+    font-size: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    font-size: 110%;
+  }
 }
 
 /*# sourceMappingURL=variables.css.map */

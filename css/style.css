@@ -2,6 +2,7 @@
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
 /* Large desktop */
+/* Extra Large desktop */
 * {
   margin: 0;
   padding: 0;
@@ -171,7 +172,7 @@ body {
 }
 .main .block {
   box-sizing: border-box;
-  width: 90%;
+  width: 95%;
   padding: 10px;
   margin-left: 10px;
   border-radius: 10px;
@@ -193,12 +194,13 @@ body {
 .main .block ul .info-block {
   margin-bottom: 10px;
   display: grid;
-  grid-template: "date title" auto "date body" auto/70px 1fr;
+  grid-template: "date title" auto "date body" auto/100px 1fr;
 }
 .main .block ul .info-block-date {
   grid-area: date;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-right: solid 1px;
   padding-right: 1rem;
   margin-right: 1rem;
@@ -221,6 +223,7 @@ body {
 
 .footer {
   background-color: #759eb8;
+  margin-top: 10px;
   grid-area: footer;
   min-height: 70px;
 }

@@ -104,7 +104,7 @@ body {
   }
   .block {
     box-sizing: border-box;
-    width: 90%;
+    width: 95%;
     padding: 10px;
     margin-left: 10px;
     border-radius: 10px;
@@ -125,11 +125,12 @@ body {
         grid-template:
           "date title" auto
           "date body" auto
-          / 70px 1fr;
+          / 100px 1fr;
         &-date {
           grid-area: date;
           display: flex;
           align-items: center;
+          justify-content: center;
           border-right: solid 1px;
           padding-right: 1rem;
           margin-right: 1rem;
@@ -156,6 +157,7 @@ body {
 
 .footer {
   background-color: #759eb8;
+  margin-top: 10px;
   grid-area: footer;
   min-height: 70px;
 }
