@@ -1,3 +1,5 @@
+@use "./media-queries" as *;
+
 h1 {
   font-size: 4em;
 }
@@ -10,6 +12,7 @@ h2 {
 h3 {
   font-size: 1.5;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 p {
@@ -27,4 +30,13 @@ li {
   list-style: none;
   font-size: 1.3em;
   display: list-item;
+}
+
+hr {
+  @include xs {
+    width: 80%;
+    border-style: solid;
+    border-color: #2a324b;
+    margin: 5px;
+  }
 }

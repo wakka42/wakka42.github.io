@@ -1,6 +1,7 @@
 @use "./media-queries" as *;
 @use "./reset" as *;
 @use "./base" as *;
+@use "./partial_animations" as *;
 
 body {
   padding: 0;
@@ -52,6 +53,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    span {
+      display: inline-block;
+      animation: 3s 1 bouncing;
+    }
   }
   @include xs {
     flex-direction: column;
@@ -84,7 +89,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
   }
 }
 
@@ -94,9 +98,13 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
+  @include xs {
+    justify-content: center;
+    align-items: center;
+  }
   .block {
     box-sizing: border-box;
-    width: 96%;
+    width: 90%;
     padding: 10px;
     margin-left: 10px;
     border-radius: 10px;
@@ -106,6 +114,11 @@ body {
       flex-direction: column;
       align-items: start;
       justify-content: center;
+      @include xs {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
