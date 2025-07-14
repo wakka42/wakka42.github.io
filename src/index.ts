@@ -1,4 +1,10 @@
-const workExperiencesObjects = [
+interface CVObject {
+  date: string;
+  title: string;
+  body: Array<string>;
+}
+
+const workExperiencesObjects: CVObject[] = [
   {
     date: "2023 - 2025",
     title: "Support Dev / System Administrator at 42 Paris",
@@ -25,7 +31,7 @@ const workExperiencesObjects = [
   },
 ];
 
-const educationalBackgroundObjects = [
+const educationalBackgroundObjects: CVObject[] = [
   {
     date: "2021 - 2026",
     title: "Digital Technology Architect",
@@ -45,20 +51,21 @@ const educationalBackgroundlistElement = document.querySelector(
   ".educational-background-list"
 );
 
-const createObjects = (parent, objs) => {
+let createObjects = (parent: Element, objs: CVObject[]) => void {};
+createObjects = (parent, objs) => {
   objs.map((item) => {
-    const divBlock = document.createElement("div");
+    const divBlock: HTMLDivElement = document.createElement("div");
     divBlock.classList.add("info-block");
-    const divBlockDate = document.createElement("div");
+    const divBlockDate: HTMLDivElement = document.createElement("div");
     divBlockDate.classList.add("info-block-date");
     divBlockDate.innerText = item.date;
-    const divBlockTitle = document.createElement("h3");
+    const divBlockTitle: HTMLDivElement = document.createElement("h3");
     divBlockTitle.classList.add("info-block-title");
     divBlockTitle.innerText = item.title;
-    const divBlockBody = document.createElement("ul");
+    const divBlockBody: HTMLUListElement = document.createElement("ul");
     divBlockBody.classList.add("info-block-body");
     item.body.forEach((element) => {
-      const li = document.createElement("li");
+      const li: HTMLLIElement = document.createElement("li");
       li.innerText = element;
       divBlockBody.appendChild(li);
     });

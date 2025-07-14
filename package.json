@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "vite",
+    "build": "tsc",
     "sass": "sass -w scss:css"
   },
   "repository": {
@@ -17,6 +19,10 @@
   "homepage": "https://github.com/wakka42/wakka42.github.io#readme",
   "description": "",
   "dependencies": {
-    "sass": "^1.88.0"
+    "sass": "^1.88.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "vite": "^7.0.4"
   }
 }
